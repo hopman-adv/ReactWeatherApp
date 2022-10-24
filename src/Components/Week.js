@@ -4,7 +4,8 @@ import Day from "./Day";
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 export default function Month() {
-  const { data, error } = useSWR("http://0.0.0.0:3001/temp", fetcher);
+  //const { data, error } = useSWR("http://0.0.0.0:3001/temp", fetcher);
+  const { data, error } = useSWR("https://api.met.no/weatherapi/locationforecast/2.0/complete?altitude=270&lat=50.05963&lon=14.44646", fetcher);
 
   if (error) return <div>failed to load</div>;
   if (!data) return <div>Loading...</div>;
