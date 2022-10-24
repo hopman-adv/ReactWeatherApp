@@ -7,7 +7,7 @@ export default function Month() {
   const { data, error } = useSWR("http://0.0.0.0:3001/temp", fetcher);
 
   if (error) return <div>failed to load</div>;
-  if (!data) return <div>loading...</div>;
+  if (!data) return <div>Loading...</div>;
 
   const allDays = data.properties.timeseries.map((day) => {
     return day.time.substring(0, 10);
