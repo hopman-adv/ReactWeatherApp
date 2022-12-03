@@ -16,13 +16,15 @@ export default function Month() {
 
   const weekDays = [...new Set(allDays)];
 
+  const timeTemp = data.properties.timeseries.map(timeItem => {
+    return [timeItem.time.substring(0, 10), timeItem.time.substring(11, 16), timeItem.data.instant.details.air_temperature];
+  })
+  
   return (
     <>
-      <ul>
         {weekDays.map((day, index) => (
-          <Day key={index} date={weekDays[index]} data={data} />
+          <Day key={index} date={weekDays[index]} data={data} timeTemp={timeTemp} />
         ))}
-      </ul>
     </>
   );
 }

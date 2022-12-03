@@ -13,3 +13,7 @@ export function getMonth(lineDate) {
 export function getYear(lineDate) {
     return lineDateToArray(lineDate)[0];
 }
+
+export function getTime(lineDate) {
+    return lineDate.substring(11, 16);
+}
