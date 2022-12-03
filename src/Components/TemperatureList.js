@@ -26,7 +26,7 @@ console.log(dayTemperatures);
               <ul className="temp-list">
                 {morn.map((tmp, index) => (
                   <li key={index}>
-                    {tmp[1]} - {tmp[2]}º C
+                    {tmp[1]} {tmp[2]}º C
                   </li>
                 ))}
               </ul>
@@ -38,7 +38,7 @@ console.log(dayTemperatures);
               <ul className="temp-list">
                 {fore.map((tmp, index) => (
                   <li key={index}>
-                    {tmp[1]} - {tmp[2]}º C
+                    {tmp[1]} {tmp[2]}º C
                   </li>
                 ))}
               </ul>
@@ -50,7 +50,7 @@ console.log(dayTemperatures);
               <ul className="temp-list">
                 {after.map((tmp, index) => (
                   <li key={index}>
-                    {tmp[1]} - {tmp[2]}º C
+                    {tmp[1]} {tmp[2]}º C
                   </li>
                 ))}
               </ul>
@@ -62,7 +62,7 @@ console.log(dayTemperatures);
               <ul className="temp-list">
                 {night.map((tmp, index) => (
                   <li key={index}>
-                    {tmp[1]} - {tmp[2]}º C
+                    {tmp[1]} {tmp[2]}º C
                   </li>
                 ))}
               </ul>
